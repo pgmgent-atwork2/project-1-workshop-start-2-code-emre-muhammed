@@ -20,19 +20,20 @@ let lockBoard = false;
 // check of the cards match with each other
  
 function matchingCards() {
-    
+    const isMatch = firstCard.dataset.symbol === secondCard.dataset.symbol;
+    if (isMatch) {
+        disableCards();
+    }
 }
 
-
- 
 function disableCards() {
     firstCard.removeEventListener("click", flipCard);
     secondCard.removeEventListener("click", flipCard);
  
     resetBoard();
 }
- 
-const test = false
+
+
 // create board
 const createBoard = () => {
     const symbols = ['🍎', '🍊', '🍋', '🍉', '🍇', '🍓', '🍒', '🍑'];
