@@ -2,7 +2,7 @@ const $gameBoard = document.querySelector(".game-board");
 
 
 
-const symbols = ['🍎', '🍊', '🍋', '🍉', '🍇', '🍓', '🍒', '🍑'];
+const symbols = ['🍎', '🍊', '🍋', '🍉', '🍇', '🍓', '🍒', '🍑', '🍎', '🍊', '🍋', '🍉', '🍇', '🍓', '🍒', '🍑'];
 
 // to keep track of the cards
 let firstCard = null;
@@ -13,7 +13,6 @@ let secondCard = null;
 let lockBoard = false;
 
 // shuffeling the symbols
-const shuffledSymbols = symbols.sort(() => Math.random() - 0.5);
 
 
 // check of the cards match with each other
@@ -36,13 +35,21 @@ function disableCards() {
 // create board
 const createBoard = () => {
     const symbols = ['🍎', '🍊', '🍋', '🍉', '🍇', '🍓', '🍒', '🍑'];
+    const symbolsWithIds = symbols.map((emoji, index) => {
+        return {
+            id: `emoji_${index}`,
+            symbol: emoji
+        };
+    });
+    const doubleSymbols = [...symbolsWithIds, ...symbolsWithIds]
+    const shuffledSymbols1 = doubleSymbols.sort(() => Math.random() - 0.5);
     let html = "";
-    for (const item of symbols) {
+    for (const item of shuffledSymbols1) {
         html +=
             `
-            <div class="card-container">
+            <div class="card-container" data-id=${item.id} >
                 <div class="card-hidder"></div>
-                <div class="card">${item}</div>
+                <div class="card">${item.symbol}</div>
             </div>
            `;
 
