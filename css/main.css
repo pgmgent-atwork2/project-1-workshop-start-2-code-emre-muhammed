@@ -1,0 +1,22 @@
+body {
+    background-color: #5aafb5;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+.game-board {
+    display: flex;
+    padding-top: 30%;
+    justify-content: center;
+    font-size: 4rem;
+}
+
+.card {
+    margin-left: 1rem;
+    border: 1px solid white;
+    width: 6rem;
+    height: 6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
