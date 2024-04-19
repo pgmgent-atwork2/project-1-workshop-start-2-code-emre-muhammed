@@ -41,6 +41,7 @@ const createBoard = () => {
         html +=
             `
             <div class="card-container">
+                <div class="card-hidder"></div>
                 <div class="card">${item}</div>
             </div>
            `;
@@ -53,21 +54,23 @@ const createBoard = () => {
 // flip the cards
 function flipCard() {
     // getting the html element
-    const $cardContainer = document.querySelector(".card-container");
-    
+    const $cardContainers = document.querySelectorAll(".card-container");
 
+    $cardContainers.forEach($cardContainer => {
         // adding event listener to each card
         $cardContainer.addEventListener("click", () => {
             $cardContainer.classList.toggle("flip");
             console.log("clicked");
         });
+        
+    });
 }
 
 
 function generateUI() {
-   createBoard();
-   flipCard();
-} 
+    createBoard();
+    flipCard();
+}
 
-generateUI(); 
+generateUI();
 
