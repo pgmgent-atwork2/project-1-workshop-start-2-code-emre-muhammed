@@ -2,7 +2,8 @@ const $gameBoard = document.querySelector(".game-board");
 
 
 
-const symbols = ['🍎', '🍊', '🍋', '🍉', '🍇', '🍓', '🍒', '🍑'];
+const symbols = ['🍎', '🍊', '🍋', '🍉', '🍇', '🍓', '🍒', '🍑', '🍎', '🍊', '🍋', '🍉', '🍇', '🍓', '🍒', '🍑'];
+
 
 // to keep track of the cards
 let firstCard = null;
@@ -19,9 +20,12 @@ const shuffledSymbols = symbols.sort(() => Math.random() - 0.5);
 // check of the cards match with each other
 
 function matchingCards() {
-    const isMatch = firstCard.dataset.symbol === secondCard.dataset.symbol;
+    let isMatch = firstCard.dataset.name === secondCard.dataset.name;
+
     if (isMatch) {
         disableCards();
+    } else {
+        unflipCards();
     }
 }
 
@@ -32,12 +36,22 @@ function disableCards() {
     resetBoard();
 }
 
+function unflipCards(){
+    setTimeout(() => {
+        firstCard.classList.remove("flip");
+        secondCard.classList.remove("flip");
+
+        resetBoard();
+    }, 1000);
+}
+
 
 // create board
 const createBoard = () => {
-    const symbols = ['🍎', '🍊', '🍋', '🍉', '🍇', '🍓', '🍒', '🍑'];
+    const symbols = ['🍎', '🍊', '🍋', '🍉', '🍇', '🍓', '🍒', '🍑','🍎', '🍊', '🍋', '🍉', '🍇', '🍓', '🍒', '🍑'];
+    const shuffledSymbols = symbols.sort(() => Math.random() - 0.5);
     let html = "";
-    for (const item of symbols) {
+    for (const item of shuffledSymbols) {
         html +=
             `
             <div class="card-container">
@@ -53,6 +67,8 @@ const createBoard = () => {
 
 // flip the cards
 function flipCard() {
+    if (lockBoard) return;
+  
     // getting the html element
     const $cardContainers = document.querySelectorAll(".card-container");
 
@@ -62,8 +78,15 @@ function flipCard() {
             $cardContainer.classList.toggle("flip");
             console.log("clicked");
         });
-        
     });
+
+
+}
+
+function resetBoard(){
+    firstCard = null;
+    secondCard = null;
+    lockBoard = false;
 }
 
 
@@ -73,4 +96,7 @@ function generateUI() {
 }
 
 generateUI();
+
+
+
 
