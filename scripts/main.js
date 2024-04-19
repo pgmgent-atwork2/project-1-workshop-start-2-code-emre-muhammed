@@ -2,8 +2,7 @@ const $gameBoard = document.querySelector(".game-board");
 
 
 
-const symbols = ['🍎', '🍊', '🍋', '🍉', '🍇', '🍓', '🍒', '🍑', '🍎', '🍊', '🍋', '🍉', '🍇', '🍓', '🍒', '🍑'];
-
+const symbols = ['🍎', '🍊', '🍋', '🍉', '🍇', '🍓', '🍒', '🍑'];
 
 // to keep track of the cards
 let firstCard = null;
@@ -14,7 +13,6 @@ let secondCard = null;
 let lockBoard = false;
 
 // shuffeling the symbols
-const shuffledSymbols = symbols.sort(() => Math.random() - 0.5);
 
 
 // check of the cards match with each other
@@ -48,15 +46,14 @@ function unflipCards(){
 
 // create board
 const createBoard = () => {
-    const symbols = ['🍎', '🍊', '🍋', '🍉', '🍇', '🍓', '🍒', '🍑','🍎', '🍊', '🍋', '🍉', '🍇', '🍓', '🍒', '🍑'];
-    const shuffledSymbols = symbols.sort(() => Math.random() - 0.5);
+    const symbols = ['🍎', '🍊', '🍋', '🍉', '🍇', '🍓', '🍒', '🍑'];
     let html = "";
-    for (const item of shuffledSymbols) {
+    for (const item of symbols) {
         html +=
             `
-            <div class="card-container">
+            <div class="card-container" data-id=${item.id} >
                 <div class="card-hidder"></div>
-                <div class="card">${item}</div>
+                <div class="card">${item.symbol}</div>
             </div>
            `;
 

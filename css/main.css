@@ -9,8 +9,8 @@ body {
     display: grid;
     grid-template-columns: repeat(4, 0fr);
     grid-template-rows: repeat(2, 1fr);
-    height: 50vh;
-    margin: 5rem;
+    height: 80vh;
+    margin-top: 5rem;
     justify-content: center;
     align-items: center;
     font-size: 4rem;
@@ -33,7 +33,7 @@ body {
     width: 6rem;
     left: 1rem;
     top: 1rem;
-    background-color: black;
+    background-color: rgb(78, 153, 31);
     height: 6rem;
     position: absolute;
 }
