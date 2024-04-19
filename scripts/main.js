@@ -50,23 +50,24 @@ const createBoard = () => {
     $gameBoard.innerHTML = html; // Use innerHTML to set the HTML content
 }
 
-// flip the card
+// flip the cards
 function flipCard() {
     // getting the html element
     const $cardContainer = document.querySelector(".card-container");
-    // adding event listener to the card container
-    $cardContainer.addEventListener("click", () => {
-        $cardContainer.classList.toggle("flip");
-        console.log("clicked");
-    });
+    
+
+        // adding event listener to each card
+        $cardContainer.addEventListener("click", () => {
+            $cardContainer.classList.toggle("flip");
+            console.log("clicked");
+        });
 }
-
-
 
 
 function generateUI() {
    createBoard();
    flipCard();
-}
+} 
 
-generateUI();
+generateUI(); 
+
