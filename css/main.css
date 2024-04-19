@@ -1,18 +1,27 @@
 body {
     background-color: #5aafb5;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    margin: 0;
-    padding: 0;
+    /* margin: 0; */
+    /* padding: 0; */
+}
+h1 {
+    text-align: center;
+    font-size: 3rem;
 }
 .game-board {
-    display: flex;
-    padding-top: 30%;
+    background-color: #2f5060;
+    display: grid;
+    grid-template-columns: repeat(4, 0fr);
+    grid-template-rows: repeat(2, 1fr);
+    height: 50vh;
+    margin: 5rem;
     justify-content: center;
+    align-items: center;
     font-size: 4rem;
 }
 
 .card {
-    margin-left: 1rem;
+    margin: 1rem;
     border: 1px solid white;
     width: 6rem;
     height: 6rem;
