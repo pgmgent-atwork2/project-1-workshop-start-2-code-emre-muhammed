@@ -87,6 +87,8 @@ generateUI(); */
 
 const $gameBoard = document.querySelector(".game-board");
 
+
+
 const symbols = ['🍎', '🍊', '🍋', '🍉', '🍇', '🍓', '🍒', '🍑'];
 
 let firstCard = null;
@@ -156,6 +158,12 @@ function flipCard() {
 function resetBoard() {
     [firstCard, secondCard] = [null, null];
     lockBoard = false;
+
+    const $reset = document.querySelector(".reset");
+    $reset.addEventListener('click', () => {
+        location.reload();
+    });
+
 }
 
 function generateUI() {
@@ -164,6 +172,8 @@ function generateUI() {
     $cardContainers.forEach($cardContainer => {
         $cardContainer.addEventListener("click", flipCard);
     });
+
+   resetBoard();
 }
 
 generateUI();
