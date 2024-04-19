@@ -1,19 +1,9 @@
 body {
     background-color: #5aafb5;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    /* margin: 0; */
-    /* padding: 0; */
+    margin: 0;
+    padding: 0;
 }
-h1 {
-    font-size: 3rem;
-}
-
-h1, h2 {
-    text-transform: uppercase;
-    text-align: center;
-}
-
-
 .game-board {
     background-color: #2f5060;
     display: grid;
