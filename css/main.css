@@ -4,6 +4,10 @@ body {
     margin: 0;
     padding: 0;
 }
+
+h1, h2 {
+    text-align: center;
+}
 .game-board {
     background-color: #2f5060;
     display: grid;
@@ -43,4 +47,14 @@ body {
     rotate: 0deg;
     z-index: 1;
     transition: 1s;
+}
+
+.button-container {
+    margin: 0 auto;
+    max-width: 5rem;
+    align-items: center;
+}
+
+.reset {
+    width: 5rem;
 }
