@@ -1,5 +1,7 @@
 const $gameBoard = document.querySelector(".game-board");
 
+
+
 const symbols = ['🍎', '🍊', '🍋', '🍉', '🍇', '🍓', '🍒', '🍑'];
 
 // to keep track of the cards
@@ -13,22 +15,6 @@ let lockBoard = false;
 // shuffeling the symbols
 const shuffledSymbols = symbols.sort(() => Math.random() - 0.5);
 
-// flip card function
-function flipCard() {
-    if (lockBoard) return;
-    if (this === firstCard) return;
-
-    this.classList.add("flip");
-
-    if (!firstCard) {
-        firstCard = this;
-        return;
-    }
-
-    secondCard = this;
-
-    matchingCards();
-}
 
 // check of the cards match with each other
 
@@ -48,14 +34,15 @@ function disableCards() {
 
 
 // create board
-
 const createBoard = () => {
     const symbols = ['🍎', '🍊', '🍋', '🍉', '🍇', '🍓', '🍒', '🍑'];
     let html = "";
     for (const item of symbols) {
         html +=
             `
-            <div class="card">${item}</div>
+            <div class="card-container">
+                <div class="card">${item}</div>
+            </div>
            `;
 
     };
@@ -63,11 +50,24 @@ const createBoard = () => {
     $gameBoard.innerHTML = html; // Use innerHTML to set the HTML content
 }
 
+// flip the cards
+function flipCard() {
+    // getting the html element
+    const $cardContainer = document.querySelector(".card-container");
+    
 
+        // adding event listener to each card
+        $cardContainer.addEventListener("click", () => {
+            $cardContainer.classList.toggle("flip");
+            console.log("clicked");
+        });
+}
 
 
 function generateUI() {
    createBoard();
-}
+   flipCard();
+} 
 
-generateUI();
+generateUI(); 
+
