@@ -88,8 +88,6 @@ generateUI(); */
 
 const $gameBoard = document.querySelector(".game-board");
 
-
-
 const symbols = ['🍎', '🍊', '🍋', '🍉', '🍇', '🍓', '🍒', '🍑'];
 
 let firstCard = null;

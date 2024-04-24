@@ -1,20 +1,38 @@
 body {
     background-color: #5aafb5;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     margin: 0;
     padding: 0;
 }
 
 h1, h2 {
+    padding-top: 5%;
     text-align: center;
+    text-transform: uppercase;
+    animation: higher 3s alternate-reverse infinite;
+    max-height: 3rem;
+    color: crimson;
 }
+
+@keyframes higher {
+    0% {
+        font-size: 2rem; color: red;
+    } 50% {
+        font-size: 3rem; color: green;
+    }
+    100% {
+        font-size: 2rem; color: blue;
+    }
+}
+
 .game-board {
+    position: relative;
     background-color: #2f5060;
     display: grid;
     grid-template-columns: repeat(4, 0fr);
     grid-template-rows: repeat(2, 1fr);
-    height: 80vh;
-    margin-top: 5rem;
+    /* height: 80vh; */
+    margin: 5rem 30%;
     justify-content: center;
     align-items: center;
     font-size: 4rem;
@@ -29,6 +47,7 @@ h1, h2 {
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: #00e68a;
 }
 .card-container {
     position: relative;
@@ -41,6 +60,7 @@ h1, h2 {
     background-color: rgb(78, 153, 31);
     height: 6rem;
     position: absolute;
+    border: black 1px solid;
 }
 
 .flip .card {
@@ -57,4 +77,24 @@ h1, h2 {
 
 .reset {
     width: 5rem;
+}
+
+.tutorial {
+    display: flex;
+    flex-direction: row;
+    margin: 15%;
+}
+summary {
+    font-size: 1.5rem;
+    color:#2f5060
+}
+pre {
+    background-color: black;
+}
+code {
+    font-family: Consolas,"courier new";
+    color: crimson;
+    /* background-color: #f1f1f1; */
+    padding: 2px;
+    font-size: 105%;
 }

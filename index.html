@@ -19,6 +19,67 @@
         </section>
 
         <h2>tutorial</h2>
+        <div class="tutorial">
+            <details>
+                <summary>HOW TO START
+                </summary>
+                <ul>
+                    <li>
+                    We hebben een code-editor nodig. In de workshop gebruiken we Visual Studio Code.
+                    </li>
+                    <li>
+                    Vereiste programmen zijn: JAVAScript, HTML en CSS
+                    </li>
+                    <li>
+                    Ten eerste gaan we HTML openen en onderstaande code plakken.</li>
+                </ul>
+                <br>
+                <pre>
+                <code>
+                    
+                </code></pre>
+            </details>
+            <details>
+                <summary>Implementeer uw javascript code
+                </summary>
+                <ul>
+                    <li>
+                    We hebben een code-editor nodig. In de workshop gebruiken we Visual Studio Code.
+                    </li>
+                    <li>
+                    Vereiste programmen zijn: JAVAScript, HTML en CSS
+                    </li>
+                    <li>
+                    Ten eerste gaan we javascript openen en onderstaande code plakken.</li>
+                </ul>
+                <br>
+                <pre>
+                <code>
+                    const $gameBoard = document.querySelector(".game-board");
+
+                    const symbols = ['🍎', '🍊', '🍋', '🍉', '🍇', '🍓', '🍒', '🍑'];
+
+                    let firstCard = null;
+                    let secondCard = null;
+                    let lockBoard = false;
+
+                    function matchingCards() {
+                        // Check if both cards are selected and their symbols match
+                        if (firstCard && secondCard && firstCard.dataset.id === secondCard.dataset.id) {
+                            // Match found, disable the cards
+                            disableCards();
+                        } else {
+                            // No match, flip both cards back
+                            setTimeout(() => {
+                                firstCard.classList.remove('flip');
+                                secondCard.classList.remove('flip');
+                                resetBoard();
+                            }, 1000);
+                        }
+                    }
+                </code></pre>
+            </details>
+        </div>
     </main>
     <script src="./scripts/main.js"></script>
 </body>
