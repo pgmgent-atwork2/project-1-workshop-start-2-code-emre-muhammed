@@ -22,7 +22,7 @@ a {
     0% {
         font-size: 2rem; color: red;
     } 50% {
-        font-size: 3rem; color: green;
+        font-size: 2rem; color: green;
     }
     100% {
         font-size: 2rem; color: blue;
@@ -82,6 +82,21 @@ a {
 
 .reset {
     width: 5rem;
+}
+button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.7rem 2rem;
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    text-align: center;
+    text-decoration: none;
+    color: rgb(78, 153, 31);
+    backface-visibility: hidden;
+    border: 0.3rem solid transparent;
+    border-radius: 3rem;
 }
 
 .tutorial {
