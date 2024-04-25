@@ -24,11 +24,20 @@
         <h2>tutorial</h2>
         <div class="tutorial">
             <details>
-                <summary>HOW TO START
+                <summary> MAPPEN EN BESTANDEN</summary>
+                Bouw onderstaande mappen en bestandstructuur aan;
+                <img src="./images/files.png" alt="">
+                <ul>
+                <li>
+                    Als reset.css gebruikten we van <a href="https://www.gdm.gent/css/">reset.css</a> van Artevelde Hogeschool.
+                </li></ul>
+            </details>
+            <details>
+                <summary>STARTEN MET CODEREN
                 </summary>
                 <ul>
                     <li>
-                        We hebben een code-editor nodig. In de workshop gebruiken we Visual Studio Code.
+                    We hebben een code-editor nodig. In de workshop gebruiken we Visual Studio Code.
                     </li>
                     <li>
                         Vereiste programmen zijn: JAVAScript, HTML en CSS
@@ -64,17 +73,18 @@
                     </code></pre>
             </details>
             <details>
-                <summary>Implementeer uw javascript code
+                <summary>IMPLEMENTEER UW JAVAScript CODE
                 </summary>
+                <br>
                 <ul>
                     <li>
-                        We hebben een code-editor nodig. In de workshop gebruiken we Visual Studio Code.
+                    We hebben een code-editor nodig. In de workshop gebruiken we Visual Studio Code.
                     </li>
                     <li>
-                        Vereiste programmen zijn: JAVAScript, HTML en CSS
+                    Vereiste programmen zijn: JAVAScript, HTML en CSS
                     </li>
                     <li>
-                        Ten eerste gaan we javascript openen en onderstaande code plakken.</li>
+                    Ten eerste gaan we javascript openen en onderstaande code plakken.</li>
                 </ul>
                 <br>
                 <pre>
@@ -103,7 +113,92 @@
                     }
                 </code></pre>
             </details>
+            <details>
+            <summary>
+            STIJLEN MET CSS
+            </summary>
+            <pre>
+            <code>
+        body {
+            background-color: #5aafb5;
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1, h2 {
+            padding-top: 5%;
+            text-align: center;
+            text-transform: uppercase;
+            animation: higher 3s alternate-reverse infinite;
+            max-height: 3rem;
+            color: crimson;
+        }
+
+        @keyframes higher {
+            0% {
+                font-size: 2rem; color: red;
+            } 50% {
+                font-size: 3rem; color: green;
+            }
+            100% {
+                font-size: 2rem; color: blue;
+            }
+        }
+
+        .game-board {
+            position: relative;
+            background-color: #2f5060;
+            display: grid;
+            grid-template-columns: repeat(4, 0fr);
+            grid-template-rows: repeat(2, 1fr);
+            /* height: 80vh; */
+            margin: 5rem 30%;
+            justify-content: center;
+            align-items: center;
+            font-size: 4rem;
+        }
+
+
+        .card {
+            margin: 1rem;
+            border: 1px solid white;
+            width: 6rem;
+            height: 6rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #00e68a;
+        }
+        .card-container {
+            position: relative;
+        }
+
+        .card-hidder {
+            width: 6rem;
+            left: 1rem;
+            top: 1rem;
+            background-color: rgb(78, 153, 31);
+            height: 6rem;
+            position: absolute;
+            border: black 1px solid;
+        }
+
+        .flip .card {
+            rotate: 0deg;
+            z-index: 1;
+            transition: 1s;
+        }
+
+        .button-container {
+            margin: 0 auto;
+            max-width: 5rem;
+            align-items: center;
+        }
+            </code></pre>
+            </details>
         </div>
+        <h1>VEEL SUCCESS !</h1>
     </main>
     <script src="./scripts/main.js"></script>
     <script>hljs.highlightAll();</script>
