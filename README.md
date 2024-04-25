@@ -4,7 +4,7 @@ Match masters is een memory quiz game gemaakt voor het amuseren van mensen en te
 ## URL's
 - FigJAm:  https://www.figma.com/file/fmzMXXb0PGkIZ6w0xR5K1P/Untitled?type=whiteboard&node-id=0%3A1&t=bd8IYMQrj6w0N5QI-1
 - Repository: https://github.com/pgmgent-atwork2/project-1-workshop-start-2-code-emre-muhammed
-- Tutorial 
+- Tutorial:  https://pgmgent-atwork2.github.io/project-1-workshop-start-2-code-emre-muhammed/èyzzzz cccccQqsq
 
 ## Functionaliteiten
 
